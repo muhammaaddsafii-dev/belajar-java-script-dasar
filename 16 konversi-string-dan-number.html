@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi String dan Number</title>
+</head>
+<body>
+    <script>
+
+        /*
+        Konversi String ke Number bisa menggunakan :
+        1. parseInt("string")
+        2. parseFloat("string")
+        3. Number("string")
+        
+        Konversi Number ke String bisa menggunakan :
+        1. number.toString()
+
+        Jika number yang kita konversi tidak valid, maka
+        hasilnya adalah NAN.  
+        *) Number("string") tidak mentolir kesalahan.
+        Apapun jika dioperasikan dengan NAN (+, -, dll), maka
+        hasilnya akan NAN.
+        
+        fungsi isNAN() digunakan untuk mengecek apakah suatu value
+        berupa NAN atau bukan. Hasil fungsi ini merupakan boolean(true/false).
+        */
+
+        //sebelum ada konversi
+        const value1 = "1";
+        const value2 = 2;
+        const sum = value1 + value2;
+
+        document.writeln(`<p>${value1}+${value2}=${sum}</p>`);
+
+
+        //setelah konversi ke number (integer)
+        const nilai1 = parseInt("1");
+        const nilai2 = 2;
+        const total = nilai1 + nilai2;
+
+        document.writeln(`<p>${nilai1}+${nilai2}=${total}</p>`);
+
+
+        ////// CONTOH KONVERSI STRING KE NUMBER ///////
+        document.writeln(`<p>${parseInt("1.9")}</p>`);
+        document.writeln(`<p>${parseFloat("1.9")}</p>`);
+        document.writeln(`<p>${Number("1.9")}</p>`);
+        //////////////////////////////////////////////
+
+        ////// CONTOH KONVERSI NUMBER KE STRING ///////
+        const a=1;
+        const b=2;
+        const hitung = a.toString()+b.toString();
+
+        document.writeln(`<p>${hitung}</p>`);
+        //////////////////////////////////////////////
+
+
+        ////// CONTOH KONVERSI YANG MENGHASILKAN NAN //////
+
+        document.writeln(`<p>${parseInt("salah")}</p>`);
+        document.writeln(`<p>${parseInt("1salah")}</p>`);
+
+        document.writeln(`<p>${parseFloat("salah kedua")}</p>`);
+        document.writeln(`<p>${parseFloat("2.3salah")}</p>`);
+        
+        document.writeln(`<p>${Number("2.3salah")}</p>`);
+
+        const nan1 = Number("NAN");             //NAN
+        const bukanNAN = 2;                     // 2
+        const operasi= nan1 + bukanNAN;         // NAN
+        document.writeln(`<p>${operasi}</p>`);
+
+        document.writeln(`<p>${isNaN(nan1)}</p>`);
+        document.writeln(`<p>${isNaN(bukanNAN)}</p>`);
+        document.writeln(`<p>${isNaN(NaN)}</p>`);
+        ///////////////////////////////////////////////////
+    </script>
+</body>
+</html>
