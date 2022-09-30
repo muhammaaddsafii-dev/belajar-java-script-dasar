@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    <script>
+        /*
+        String template bisa digunakan untuk SUBTITUSI:
+        1. Subtitusi variable   (jadi ngga perlu pake ...+....+... untuk nggabung string)
+        2. Subtitusi ekspresi   (contoh ekspresi misalnya : perbandingan)
+
+        String template ditandai dengan backtick (`...`).
+        Manggilnya pake ${...}
+        */
+
+        const firstName = "Eko";
+        const middleName = "Kurniawan";
+        const lastName = "Khannedy";
+        
+        const stringTemplate = `Nama : ${firstName} ${middleName} ${lastName}`;
+        console.info(stringTemplate);
+
+        const nilai = 90;
+        const lulus = nilai > 75;
+        const apakahLulus = `Apakah ${stringTemplate} lulus ? ${lulus}`;
+
+        console.info(apakahLulus);
+
+
+        /*
+        Selain SUBTITUSI, string template bisa juga
+        digunakan untuk MULTILINE (auto pindah baris).
+        Penggunaannya tinggal tambah 'enter' di kodenya. 
+        */
+
+        let multiLine = `Saya Eko Kurniawan Khannedy.
+Hobby saya ngoding.
+Saya sedang belajar JavaScript.
+Kalau sedang malas saya biasanya tidur.` ;
+
+        document.writeln("<pre>" +multiLine+"</pre>");
+
+    </script>
+    
+</body>
+</html>
