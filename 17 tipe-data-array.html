@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Array</title>
+</head>
+<body>
+    <script>
+        /*
+        Cara mendefinisikan array di JavaScript
+        */
+        let arrayKosong = [];
+        let arrayNama = ["Eko", "Kurniawan", "Khannedy"];
+        console.table(arrayNama);
+        
+        /*
+        Gunakan fungsi push() untuk menambah array
+        */
+        let names = ["budi", "rudi", "tabooti"];
+        names.push("Eko");
+        names.push("Kurniawan", "Khannedy");
+        console.table(names);
+
+        /*
+        Operasi-operasi pada array :
+        1. array.push(value)            : Menambah data array
+        2. array.length                 : Mendapatkan panjang array
+        3. array[index]                 : Mendapatkan data di posisi index
+        4. array[index] = value         : Mengubah data di posisi index
+        5. delete array[index]          : Menghapus data di posisi index, namun index tidak bergeser
+        */
+
+        let profesi = ["farmer", "seller"];     // define array
+        profesi.push("teacher");                // memasukkan data ke array
+        console.table(profesi);
+
+        profesi[1] = "Programmer";              // mengubah isi data array index ke-1
+        console.table(profesi);
+
+        delete profesi[1];                      // menghapus isi data array index ke-1
+        console.table(profesi);
+        console.info(profesi.length);   
+
+    </script>
+</body>
+</html>
