@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+</head>
+<body>
+    <script>
+        /*
+        Pada JavaScript terdapat 3 popup :
+        1. Alert        : Memberi peringatan berupa popup text di browser.
+        2. Prompt       : Meminta input string pada pengguna browser.
+        3. Confirm      : Meminta input boolean (contoh : Ya dan Tidak).
+        */
+
+        // contoh alert
+        // alert("Selamat belajar JavaScript");
+
+        // // contoh prompt
+        // const nama = prompt("Siapa Nama anda ?");
+        // alert(`Hallo ${nama}`);
+
+        // contoh confirm
+        const validasi = confirm("Anda yakin mau masuk ?");
+        if (validasi) {
+            const name = prompt(`Masukkan nama anda: `);
+            alert(`Hello ${name}`);
+        } else {
+            alert("Bye bye"); 
+        };
+
+    </script>
+</body>
+</html>
