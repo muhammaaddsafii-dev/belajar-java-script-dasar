@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        Tipe data object adalah tipe data yang mirip dengan
+        array, yang membedakan adalah index (kalau dalam object disebut properties/attributr)
+        pada tipe data object bisa berupa STRING.
+
+        Istilah-istilah dalam object :
+        1. Properties/attribute : index dalam object.
+        */
+
+        const person = {};      //mendefine object kosong
+
+        //mengubah properties atau attribute pada object
+        person["name"] = "Eko Kurniawan";
+        person["address"] = "Indonesia";
+        person["umur"] = 30;
+
+        console.table(person);
+
+        delete person["umur"];
+        console.table(person);
+
+
+        //membuat OBJECT dengan properties
+        const orang = {
+            nama: "Eko Khannedy",  
+            alamat: "Indonesia",
+            umur: 30
+        };
+
+        console.table(orang);
+
+        //mengakses property object
+        console.info(`${orang.nama}`);
+        console.info(`${orang.alamat}`);
+        document.writeln(orang.nama);
+
+
+        /*
+        *********CATATAN TAMBAHAN**********
+        Kalau nama PROPERTIES lebih dari satu kata,
+        maka define dengan menggunakan petik dua.
+        contoh :
+
+        const orang = {
+            "nama lengkap": "Eko Khannedy",  
+            alamat: "Indonesia",
+            umur: 30
+        };
+
+        cara manggilnya :
+        console.info(`${orang["nama lengkap"]`);
+        console.info(`${orang.alamat}`);
+
+        */
+
+    </script>    
+</body>
+</html>
