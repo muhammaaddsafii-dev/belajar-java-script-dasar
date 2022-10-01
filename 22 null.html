@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Null</title>
+</head>
+<body>
+    <script>
+        /*
+        Berbeda dengan undefined, null ini valuenya
+        atau propertiesnya sudah didefined, tapi memang
+        valuenya "null".
+        Liat contoh di bawah aja kalo masih bingung.
+        */
+
+        let name = null;
+
+        if(name === null){
+            console.info("Datanya NULL");
+        }else if(name === undefined){
+            console.info("Datanya UNDEFINED");
+        }else{
+            console.info(`Hello ${name}`);
+        };
+        
+    </script>
+</body>
+</html>

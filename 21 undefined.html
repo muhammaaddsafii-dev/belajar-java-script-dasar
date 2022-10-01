@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined</title>
+</head>
+<body>
+    <script>
+    /*
+    UNDEFINED merupakan suatu variable yang tidak ada valuenya.
+    UNDEFINED ini merupakan tipe data.
+    */
+
+    let name ;       //ini sama kayak let name = undefined;
+
+    if(name === undefined){
+        console.info("UNDEFINED !");
+    }else{
+        console.info("DEFINED !");
+    };
+
+    //UNDEFINED PADA ARRAY
+    const nama = ["Eko", "Kurniawan"];
+
+    if(nama[2] === undefined){
+        console.info("Array Undefined");
+    }else{
+        console.info("Array Defined !");
+    };
+
+    //UNDEFINED PADA OBJECT
+    const person = {
+        name: "Eko",
+        address: "indonesia"
+    };
+
+    if(person.umur === undefined){
+        console.info("Properties undefined");
+    }else{
+        console.info("Properties defined");
+    };
+
+    </script>
+</body>
+</html>
