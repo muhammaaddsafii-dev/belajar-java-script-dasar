@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Expression</title>
+</head>
+<body>
+    <script>
+        /*
+        Switch merupakan opsi lain dari percabangan (Selain If Else).
+        Namun, switch hanya digunakan untuk perbandingan == atau ===.
+        */
+
+        const nilai = "B";
+        switch(nilai){
+            case "A":
+                console.info("Selamat Anda Lulus dengan baik");
+                break;
+            case "B":
+            case "C":
+                console.info("Selamat Anda Lulus");
+                break;
+            case "D":
+                console.info("Anda Tidak Lulus");
+                break;
+            default:
+                console.info("Mungkin anda salah jurusan");
+        }
+    </script>
+</body>
+</html>
