@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish Coalescing Operator</title>
+</head>
+<body>
+    <script>
+        /*
+        null dan undefined di JavaScript merupakan tipe data Nullish.
+        Nullish merepresentasikan data kosong.
+
+        Nullish coalescing operator memang operator yang
+        sama kayak ternary, namun dikhususkan untuk nullish.
+        Nullish coalescing operator ditandai dengan tanda tanya dua (??)
+
+        */
+
+        let parameter;                  
+
+        // ini kalo pake if
+        /*
+        let data = parameter;
+        if(data === null || data === undefined){
+            data = "Ini data default";
+        }
+
+        document.writeln(data);
+        */
+
+        // ini kalo pake nullish coalescing operator
+        data = parameter ?? "Ini data default";
+        document.writeln(data);
+
+    </script>
+</body>
+</html>
