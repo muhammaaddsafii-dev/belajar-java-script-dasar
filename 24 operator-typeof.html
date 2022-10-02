@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator typeof</title>
+</head>
+<body>
+    <script>
+        /*
+        Karena di javaScript bahasanya bersifat dynamic
+        language (value dari variable bisa diubah-ubah tipe datanya),
+        maka kadang kala kita perlu tahu tipe data apa yang sudah didefine.
+        Untuk itu kita perlu oprator typeof.
+        */
+
+        let data = "Eko Kurniawan";
+        const dataType = typeof data;
+
+        document.writeln(`<p>${dataType}</p>`);
+
+        /*
+        catatan tambahan :
+        tipe data array, object, null akan didefinisikan bertipe OBJECT.
+        */
+    </script>
+</body>
+</html>
