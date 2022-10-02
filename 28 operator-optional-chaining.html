@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Optional Chaining</title>
+</head>
+<body>
+    <script>
+        /*
+        Operator optional chaining ditandai dengan tanda tanya (?).
+        Mirip kayak ternary operator, tapi penggunaannya berbeda.
+
+        Optional chaining digunakan untuk mengamankan ketika ingin mengakses
+        PROPERTY sebuah OBJECT dari data NULLISH.
+
+        Karena jika mencoba mengakses property dari sebuah object dari data nullish
+        tanpa optional chaining, maka akan terjadi error.
+        
+        contoh kode yang akan error tanpa optional chaining:
+
+        let person = {};
+        alert(person.address.country);
+
+        */
+
+        //Kode pengecekan menggunakan If
+        /*
+        let person = {};
+        let country;
+
+        if(person.address !== null && person.address !== undefined){
+            country = person.address.country;
+        }
+
+        document.writeln(country);
+        */
+
+        //Kode menggunakan optional chaining
+        let person = {
+            address: {
+                country: "Indonesia",
+                city: "Yogyakarta"
+            }
+        };
+        
+        let country = person?.address?.country;     //artinya dia ngecek, apakah person nullish, baru akses address, dst.
+        let village = person?.address?.village;
+
+        document.writeln(country);
+        document.writeln(village);      //ini hasilnya akan undefined, karena memang tidak ada village
+
+    </script>
+</body>
+</html>
