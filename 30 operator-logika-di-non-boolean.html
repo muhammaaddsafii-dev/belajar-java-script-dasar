@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Logika di Non-Boolean</title>
+</head>
+<body>
+    <script>
+        /*
+        Pada JavaScript kita bisa menggunakan operator
+        logika AND (&&) dan OR (||) untuk tipe data non-boolean.
+        */
+        
+        /*
+        Operator OR (||) di non-boolean :
+        1. Membaca dari kiri ke kanan
+        2. Mengambil nilai pertama yang truthy
+        3. Jika tidak ada yang truthy, maka yang terakhir yang diambil
+        */
+        console.info("hello" || "");
+        console.info("" || []);
+        console.info("0" || "NOL");
+        console.info(0 || "NOL");
+        console.info(null || "NULL");
+        console.info(undefined || "UNDEFINED");
+        console.info(undefined || null);
+
+        //KAPAN KITA MENGGUNAKANNYA ? MISALNYA PADA SAAT SEPERTI INI :
+        const person = {
+            firstName: "",
+            middleName: 'Kurniawan',
+            lastName: 'Khannedy'
+        };
+
+        const name = person.firstName || person.lastName;
+        console.info(name);
+
+        /*
+        Operator AND (&&) di non-boolean :
+        1. Membaca dari kiri ke kanan
+        2. Mengambil nilai pertama yang falsy
+        3. Jika tidak ada yang falsy, maka yang terakhir yang diambil
+        */
+        console.info("hello" && "");
+        console.info("" && []);
+        console.info("0" && "NOL");
+        console.info(0 && "NOL");
+        console.info(null && "NULL");
+        console.info(undefined && "UNDEFINED");
+        console.info(undefined && null);
+        console.info(6 && "Hello");
+    </script>
+</body>
+</html>

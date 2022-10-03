@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falsy dan Truthy</title>
+</head>
+<body>
+    <script>
+        /*
+        Falsy: Value yang ketika dalam konteks bolean, dianggap false.
+        Truthy: Value yang dianggap true.
+
+        Pada JavaScript, 'kondisi' (misal pada If) tidak harus boolean,
+        namun kita harus tahu mana yang falsy dan mana yang truthy.
+
+        List Falsy:
+        1. false        : boolean false
+        2. 0, -0
+        3. "", '', ``   : string kosong
+        4. null
+        5. undefined
+        6. NaN
+
+        Array dan object dianggap truthy, meskipun valuenya kosong.
+        */
+
+        let data = "";
+
+        if(data){
+            document.writeln("Data True");
+        }else{
+            document.writeln("Data False");
+        };
+
+    </script>
+</body>
+</html>
