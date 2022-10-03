@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continue di Perulangan</title>
+</head>
+<body>
+    <script>
+        /*
+        Continue digunakan untuk menghentikan perulangan saat ini,
+        dan akan melanjutkan ke perulangan selanjutnya.
+
+        Kalo di for loop, dia akan mengeksekusi post statement, baru 
+        dilanjutkan ke perulangan selanjutnya.
+
+        continue artinya yang bawah tidak akan dieksekusi dan lanjut
+        ke perulangan selanjutnya. Tapi tidak langsung lanjut, dia akan 
+        tetep eksekusi post statement.
+        */
+
+        // for(let counter = 1; counter <= 100; counter++){
+        //     if(counter % 2 === 0){
+        //         continue;
+        //     }
+        //     document.writeln(`<p>Angka ke-${counter}</p>`);
+        // }
+
+        // let counter = 1;
+        // while (counter <=10){
+        //     if(counter % 2 === 0){
+        //         counter++;
+        //         continue;
+        //     }
+        //     document.writeln(`<p>${counter}</p>`);
+        //     counter++;
+        // }
+
+        let counter = 1;
+        do{
+            if(counter %2 === 0){
+                counter++;
+                continue;
+            }
+            document.writeln(`<p>${counter}</p>`);
+            counter++;
+        }while (counter <= 10)
+
+    </script>
+</body>
+</html>
